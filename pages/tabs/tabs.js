@@ -19,6 +19,7 @@ Page({
       orderTel:'',
       orderLists:'',
       appointmentId:'',
+      appointmentId1:'',
 
   },
   onLoad: function () {
