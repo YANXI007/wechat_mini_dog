@@ -4,18 +4,18 @@
     <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell weui-cell_input">
             <view class="weui-cell__hd">
-                <view class="weui-label">预约日期：</view>
+                <view class="weui-label">预约日期：<text>{{ workTime }}</text></view>
             </view>
             <view class="weui-cell__bd">
-                <input class="weui-input" value="123" disabled />
+                <input class="weui-input" value="" disabled />
             </view>
         </view>
         <view class="weui-cell weui-cell_input">
             <view class="weui-cell__hd">
-                <view class="weui-label">预约店铺：</view>
+                <view class="weui-label">预约店铺：<text>{{ shopName }}</text></view>
             </view>
             <view class="weui-cell__bd">
-                <input class="weui-input" value="123" disabled />
+                <input class="weui-input" value="" disabled />
             </view>
         </view>
         <view class="weui-cell weui-cell_input weui-cell_vcode">

@@ -9,7 +9,7 @@ Page({
       addressTab : 0,
       addressName1: "龙江店",
       addressName2: "龙山店",
-      addressName3: "龙店",
+      addressName3: "容桂店",
       noOrder: true,
       dateSelect:'',
       addressSelect:'',
@@ -20,6 +20,7 @@ Page({
       orderLists:'',
       appointmentId:'',
       appointmentId1:'',
+      board:'',
 
   },
   onLoad: function () {
@@ -63,6 +64,8 @@ Page({
         }
         console.log(that.data.currentTab);
         this.queryInfo(that.data.addressTab,that.data.currentTab);
+
+
     },
     //点击切换选择地点
     addressTab: function (e) {
@@ -79,14 +82,23 @@ Page({
         this.queryInfo(this.data.addressTab,this.data.currentTab);
     },
     queryInfo:function(shopId,workTime){
+        console.log("选择店铺数字" + shopId);
+        var shopName = '';
       const that = this;
       if (shopId==0){
-          shopId = 'ls'
+          shopId = 'lj';
+          shopName = '龙江店';
       }else if(shopId==1){
-          shopId = 'lj'
+          shopId = 'ls';
+          shopName = '龙山店';
       }else if(shopId == 2){
-          shopId = 'rg'
+          shopId = 'rg';
+          shopName = '容桂店';
       }
+      console.log("选择店铺ID" + shopId);
+      wx.setStorageSync('shopId', shopId);
+      wx.setStorageSync('workTime', workTime);
+      wx.setStorageSync('shopName', shopName);
       /*if(workTime==0){
           workTime = ''
       }*/
@@ -94,14 +106,16 @@ Page({
             url: 'https://qinxuan.club/dog-mini/customer/appointmentPage.do',
             data: {
                 shopId: shopId,
-                workTime: '2019/04/21',
+                workTime: '2019/04/22',
                 openid: wx.getStorageSync('openid')
             },
             success(res) {
                 console.log(res);
                 //const list = res.data.CustomerAppointment.petLists;
-                //console.log(list);
-
+                console.log(res);
+                that.setData({
+                    board:res.data.board
+                });
                  if(res.data.sysStatue==1){
                      that.setData({
                          btnColor: true

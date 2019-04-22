@@ -41,7 +41,9 @@
         </view>
     </view>
     <view class="main-tab">
-        <view class="title">预约系统已开发</view>
+        <view class="title">
+            <text>{{ board }}</text>
+        </view>
         <view class="day-box">
             <block>
                 <view class="day-item noorder" wx:if="{{noOrder}}">
