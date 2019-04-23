@@ -21,6 +21,7 @@ Page({
 
       shopId:"",
       workTime:"",
+      mobile:"",
       multiArray: [['犬', '猫','请选择'], ['中型', '大型', '小型',' '], ['洗澡', '造型','SPA',' ']],
       objectMultiArray: [
           [
@@ -179,9 +180,8 @@ Page({
           ]
       ],
       multiIndex2: [2, 3, 3],
-
-
   },
+    //页面打开后渲染数据
     onLoad: function () {
         const that = this;
         console.log("进入了预约详情页面");
@@ -203,7 +203,7 @@ Page({
             petLists = wx.getStorageSync('petLists');
             console.log("获取缓存预约列表：" + petLists);
             //渲染petList
-            //this.showPetList(petLists);
+            that.showPetList(petLists);
         }else {
             wx.request({
                 url: 'https://qinxuan.club/dog-mini/customer/showAppointHistory.do',
@@ -275,6 +275,7 @@ Page({
             data.multiIndex = [_0,_1,_2];
             console.log(data);
             this.setData(data)
+            this.transPet(_0,_1,_2,0);
         }
 
         //渲染第二个
@@ -317,6 +318,7 @@ Page({
             data.multiIndex1 = [_0,_1,_2];
             console.log(data);
             this.setData(data)
+            this.transPet(_0,_1,_2,1);
         }
 
         //渲染第三个
@@ -358,12 +360,11 @@ Page({
             }
             data.multiIndex2 = [_0,_1,_2];
             console.log(data);
-            this.setData(data)
+            this.setData(data);
+            this.transPet(_0,_1,_2,1);
         }
 
     },
-
-
 
     // 将选择的宠物转化为宠物对象，然后添加到数组中
     transPet:function(_kindPet,_size,_kindService,index){
@@ -456,6 +457,8 @@ Page({
 
         this.setData(data)
     },
+
+    //删除记录
     delete:function(e){
         console.log('删除');
         const data = {
@@ -465,7 +468,8 @@ Page({
         data.multiIndex[0] = 2
         data.multiArray[1] = [' '];
         data.multiArray[2] = [' '];
-        this.setData(data)
+        this.setData(data);
+        this.transPet(2,0,0,0);
     },
     delete1:function(e){
         console.log('删除');
@@ -476,7 +480,8 @@ Page({
         data.multiIndex1[0] = 2
         data.multiArray1[1] = [' '];
         data.multiArray1[2] = [' '];
-        this.setData(data)
+        this.setData(data);
+        this.transPet(2,0,0,1);
 
     },
     delete2:function(e){
@@ -488,7 +493,8 @@ Page({
         data.multiIndex2[0] = 2
         data.multiArray2[1] = [' '];
         data.multiArray2[2] = [' '];
-        this.setData(data)
+        this.setData(data);
+        this.transPet(2,0,0,2);
 
     },
 
@@ -564,14 +570,53 @@ Page({
         }
         this.setData(data)
     },
+
+    mobileInput: function (e) {
+        this.setData({
+            mobile: e.detail.value
+        })
+    },
+
     formSubmit(e) {
         console.log('form发生了submit事件，携带数据为：', e.detail.formId);
         console.log('form发生了submit事件，携带数据为：', e.detail.value);
         console.log('数组转化：', JSON.stringify(this.data.list));
         //var param = {"petLists":this.data.list};
+
+        var mobile = this.data.mobile;
+        var phonetel = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
+        if (mobile == '') {
+            wx.showToast({
+                title: '手机号不能为空',
+                icon: 'none',
+                duration: 1500
+            })
+            return false
+        } else if (mobile.length != 11) {
+            wx.showToast({
+                title: '手机号长度有误',
+                icon: 'none',
+                duration: 1500
+            })
+            return false;
+        }
+
+        var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
+        if (!myreg.test(mobile)) {
+            wx.showToast({
+                title: '手机号有误',
+                icon: 'none',
+                duration: 1500
+            })
+            return false;
+        }
         if (this.data.list[0].kindPet == ""&&this.data.list[1].kindPet == ""&&this.data.list[2].kindPet == ""){
-            console.log("预约列表为空值，不能提交");
-            //alert("预约列表为空值，不能提交");
+            wx.showToast({
+                title: '预约列表不能为空',
+                icon: 'none',
+                duration: 1500
+            })
+            console.log("=-=-=-=-=-=-=")
             return false;
         }
 
@@ -583,11 +628,12 @@ Page({
                 workTime: '2019/04/21',
                 openid: wx.getStorageSync('openid'),
                 dtype:e.detail.formId,
+                'CustomerAppointment.petLists':this.data.list
                 //petLists:JSON.stringify(this.data.list)
             },
 
             success(res) {
-                console.log("发送预约请求结果：" + res);
+                console.log("发送预约请求结果：" + res.data);
             }
         });
 

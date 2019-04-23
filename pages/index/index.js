@@ -106,7 +106,7 @@ Page({
             url: 'https://qinxuan.club/dog-mini/customer/appointmentPage.do',
             data: {
                 shopId: shopId,
-                workTime: '2019/04/22',
+                workTime: '2019/04/23',
                 openid: wx.getStorageSync('openid')
             },
             success(res) {
@@ -127,7 +127,7 @@ Page({
                  }
                 if(res.data.isApp==1){
                     //缓存预约列表
-                    wx.setStorageSync("petLists",res.data.petLists);
+                    wx.setStorageSync("petLists",res.data.CustomerAppointment.petLists);
                     that.setData({
                         noOrder: false,
                         orderDate: workTime,
