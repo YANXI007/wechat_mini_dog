@@ -578,13 +578,13 @@ Page({
     },
 
     formSubmit(e) {
+      const that = this
         console.log('form发生了submit事件，携带数据为：', e.detail.formId);
         console.log('form发生了submit事件，携带数据为：', e.detail.value);
         console.log('数组转化：', JSON.stringify(this.data.list));
         //var param = {"petLists":this.data.list};
 
         var mobile = this.data.mobile;
-        var phonetel = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
         if (mobile == '') {
             wx.showToast({
                 title: '手机号不能为空',
@@ -629,14 +629,42 @@ Page({
                 openid: wx.getStorageSync('openid'),
                 dtype:e.detail.formId,
                 'CustomerAppointment.petLists':this.data.list
-                //petLists:JSON.stringify(this.data.list)
+                //todo petLists:JSON.stringify(this.data.list)
             },
 
             success(res) {
                 console.log("发送预约请求结果：" + res.data);
+
+
+            },
+            complete(res){
+                var msgOk = '预约成功，期待您的光临！';
+                var msgFail = '预约失败，请您稍后再试！';
+                that.showMsg(msgOk);
             }
         });
 
+    },
+    showMsg:function(msg){
+      const that = this
+        wx.showModal({
+            title: '提示',
+            content: msg,
+            showCancel:false,
+            success(res) {
+                if (res.confirm) {
+                    console.log('用户点击确定');
+                    that.goIndexPage()
+                } else if (res.cancel) {
+                    console.log('用户点击取消')
+                }
+            }
+        })
+    },
+    goIndexPage:function(){
+        wx.navigateTo({
+            url: '../index/index'
+        })
     },
     formReset() {
         console.log('form发生了reset事件')

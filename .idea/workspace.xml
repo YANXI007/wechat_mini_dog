@@ -4,7 +4,6 @@
     <list default="true" id="08c9d198-6c3b-46e7-a6f4-0b9174052321" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/pages/appo/appo.js" afterPath="$PROJECT_DIR$/pages/appo/appo.js" />
-      <change beforePath="$PROJECT_DIR$/pages/appo/appo.wxml" afterPath="$PROJECT_DIR$/pages/appo/appo.wxml" />
       <change beforePath="$PROJECT_DIR$/pages/index/index.js" afterPath="$PROJECT_DIR$/pages/index/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -22,8 +21,8 @@
       <file leaf-file-name="appo.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/appo/appo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="726">
-              <caret line="619" column="25" lean-forward="true" selection-start-line="619" selection-start-column="25" selection-end-line="619" selection-end-column="25" />
+            <state relative-caret-position="-156">
+              <caret line="608" column="30" lean-forward="true" selection-start-line="608" selection-start-column="30" selection-end-line="608" selection-end-column="30" />
               <folding>
                 <element signature="e#86#161#0" expanded="false" />
                 <element signature="e#480#1495#0" expanded="false" />
@@ -49,6 +48,36 @@
                 <element signature="e#14363#14582#0" expanded="false" />
                 <element signature="e#14620#15449#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1134">
+              <caret line="63" column="4" lean-forward="true" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.wxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/index/index.wxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="348">
+              <caret line="68" column="56" lean-forward="true" selection-start-line="68" selection-start-column="56" selection-end-line="68" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/index/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="161" column="26" lean-forward="true" selection-start-line="161" selection-start-column="26" selection-end-line="161" selection-end-column="26" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -84,6 +113,7 @@
       <find>删除</find>
       <find>bo</find>
       <find>预约店铺</find>
+      <find>goappo</find>
     </findStrings>
     <replaceStrings>
       <replace>multiArray1</replace>
@@ -118,15 +148,15 @@
         <option value="$PROJECT_DIR$/pages/appo/app.wxml" />
         <option value="$PROJECT_DIR$/app.wxss" />
         <option value="$PROJECT_DIR$/pages/appo/appo.wxss" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/pages/tabs/tabs.wxss" />
         <option value="$PROJECT_DIR$/pages/tabs/tabs.wxml" />
         <option value="$PROJECT_DIR$/pages/tabs/tabs.js" />
         <option value="$PROJECT_DIR$/app.json" />
         <option value="$PROJECT_DIR$/pages/index/index.json" />
         <option value="$PROJECT_DIR$/pages/index/index.wxml" />
-        <option value="$PROJECT_DIR$/pages/index/index.js" />
         <option value="$PROJECT_DIR$/pages/appo/appo.wxml" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/pages/index/index.js" />
         <option value="$PROJECT_DIR$/pages/appo/appo.js" />
       </list>
     </option>
@@ -351,7 +381,7 @@
       <workItem from="1555825112755" duration="16687000" />
       <workItem from="1555897915855" duration="804000" />
       <workItem from="1555898801320" duration="24470000" />
-      <workItem from="1555987681430" duration="17798000" />
+      <workItem from="1555987681430" duration="19091000" />
     </task>
     <task id="LOCAL-00001" summary="删除index，修改tab为index，index为默认加载页">
       <created>1555898215805</created>
@@ -374,11 +404,18 @@
       <option name="project" value="LOCAL" />
       <updated>1556005371707</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="添加手机号验证，列表验证">
+      <created>1556014327053</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1556014327053</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115318000" />
+    <option name="totallyTimeSpent" value="116611000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -452,7 +489,9 @@
     <MESSAGE value="删除index，修改tab为index，index为默认加载页" />
     <MESSAGE value="多级选择器添加默认值，收集参数，添加删除功能" />
     <MESSAGE value="完成历史预约记录，修改预约多级选择器的回显" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成历史预约记录，修改预约多级选择器的回显" />
+    <MESSAGE value="添加手机号验证" />
+    <MESSAGE value="添加手机号验证，列表验证" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加手机号验证，列表验证" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -777,30 +816,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="32" column="50" lean-forward="true" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="112" column="33" lean-forward="true" selection-start-line="112" selection-start-column="33" selection-end-line="112" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index/index.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="46" column="24" lean-forward="false" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/weui.wxss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
@@ -820,10 +835,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pages/index/index.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="68" column="56" lean-forward="true" selection-start-line="68" selection-start-column="56" selection-end-line="68" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1134">
+          <caret line="63" column="4" lean-forward="true" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/index/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="161" column="26" lean-forward="true" selection-start-line="161" selection-start-column="26" selection-end-line="161" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/appo/appo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="619" column="25" lean-forward="true" selection-start-line="619" selection-start-column="25" selection-end-line="619" selection-end-column="25" />
+        <state relative-caret-position="-156">
+          <caret line="608" column="30" lean-forward="true" selection-start-line="608" selection-start-column="30" selection-end-line="608" selection-end-column="30" />
           <folding>
             <element signature="e#86#161#0" expanded="false" />
             <element signature="e#480#1495#0" expanded="false" />

@@ -161,9 +161,28 @@ Page({
             },
             success(res) {
                 console.log(res);
+                var msgOk = '取消成功！';
+                var msgFail = '取消失败！，请您稍后再试！';
+                that.showMsg(msgOk)
             }
         });
 
+    },
+    showMsg:function(msg){
+        const that = this
+        wx.showModal({
+            title: '提示',
+            content: msg,
+            showCancel:false,
+            success(res) {
+                if (res.confirm) {
+                    console.log('用户点击确定');
+                    //todo 将预约按钮显示出来
+                } else if (res.cancel) {
+                    console.log('用户点击取消')
+                }
+            }
+        })
     },
     //上午的预约时间
     bindTimeChangeAm: function (e) {
