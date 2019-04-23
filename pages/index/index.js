@@ -111,8 +111,8 @@ Page({
             },
             success(res) {
                 console.log(res);
-                //const list = res.data.CustomerAppointment.petLists;
-                console.log(res);
+                //缓存是否预约过
+                wx.setStorageSync("isApp",res.data.isApp);
                 that.setData({
                     board:res.data.board
                 });
@@ -126,6 +126,8 @@ Page({
                      });
                  }
                 if(res.data.isApp==1){
+                    //缓存预约列表
+                    wx.setStorageSync("petLists",res.data.petLists);
                     that.setData({
                         noOrder: false,
                         orderDate: workTime,
