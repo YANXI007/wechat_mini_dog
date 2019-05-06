@@ -86,6 +86,7 @@
                 </view>
             </block>
         </view>
+        <!--<button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">微信登录</button>-->
     </view>
 
 </view>

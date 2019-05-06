@@ -187,6 +187,7 @@ Page({
         console.log("进入了预约详情页面");
         this.data.shopId = wx.getStorageSync('shopId');
         this.data.workTime = wx.getStorageSync('workTime');
+        this.data.mobile = wx.getStorageSync('phone');
 
         var shopName = wx.getStorageSync('shopName');
         this.setData({
@@ -234,6 +235,12 @@ Page({
         console.log("回显原始数据：" + petList[0].kindPet);
         console.log("回显原始数据：" + petList[0].kindService);
         console.log("回显原始数据：" + petList[0].size);
+        /*console.log("回显原始数据：" + petList[1].kindPet);
+        console.log("回显原始数据：" + petList[1].kindService);
+        console.log("回显原始数据：" + petList[1].size);
+        console.log("回显原始数据：" + petList[2].kindPet);
+        console.log("回显原始数据：" + petList[2].kindService);
+        console.log("回显原始数据：" + petList[2].size);*/
 
         //渲染第一个
         if (petList[0] != undefined){
@@ -269,12 +276,12 @@ Page({
                 _2 = 0;
             }else if (kingService == "modeling"){
                 _2 = 1;
-            }else if (kingService == "spa"){
+            }else if (kingService == "SPA"){
                 _2 = 2;
             }
             data.multiIndex = [_0,_1,_2];
             console.log(data);
-            this.setData(data)
+            this.setData(data);
             this.transPet(_0,_1,_2,0);
         }
 
@@ -312,12 +319,12 @@ Page({
                 _2 = 0;
             }else if (kingService == "modeling"){
                 _2 = 1;
-            }else if (kingService == "spa"){
+            }else if (kingService == "SPA"){
                 _2 = 2;
             }
             data.multiIndex1 = [_0,_1,_2];
             console.log(data);
-            this.setData(data)
+            this.setData(data);
             this.transPet(_0,_1,_2,1);
         }
 
@@ -355,7 +362,7 @@ Page({
                 _2 = 0;
             }else if (kingService == "modeling"){
                 _2 = 1;
-            }else if (kingService == "spa"){
+            }else if (kingService == "SPA"){
                 _2 = 2;
             }
             data.multiIndex2 = [_0,_1,_2];
@@ -581,11 +588,11 @@ Page({
       const that = this
         console.log('form发生了submit事件，携带数据为：', e.detail.formId);
         console.log('form发生了submit事件，携带数据为：', e.detail.value);
-        console.log('数组转化：', JSON.stringify(this.data.list));
+        console.log('提交参数：', this.data.list);
         //var param = {"petLists":this.data.list};
 
         var mobile = this.data.mobile;
-        if (mobile == '') {
+        if (mobile == '' || mobile == ' ') {
             wx.showToast({
                 title: '手机号不能为空',
                 icon: 'none',
@@ -625,23 +632,28 @@ Page({
             dataType:'json',
             data: {
                 shopId: this.data.shopId,
-                workTime: '2019/04/21',
+                workTime: '2019/05/06',
+                mobile:mobile,
                 openid: wx.getStorageSync('openid'),
+                appointmentId: wx.getStorageSync('appointmentId'),
                 dtype:e.detail.formId,
-                'CustomerAppointment.petLists':this.data.list
-                //todo petLists:JSON.stringify(this.data.list)
+                petLists:JSON.stringify(this.data.list)
+                //petLists:JSON.toLocaleString(that.data.list)
             },
-
+            method:'POST',
+            header: {
+                'content-type': 'application/x-www-form-urlencoded'
+            },
             success(res) {
-                console.log("发送预约请求结果：" + res.data);
-
-
+                console.log("发送预约请求结果：" + res.data.type);
+                var msg = "";
+                if (res.data.type == 1){
+                    msg = '预约成功，期待您的光临！';
+                }else {
+                    msg = '预约失败，请您稍后再试！';
+                }
+                that.showMsg(msg);
             },
-            complete(res){
-                var msgOk = '预约成功，期待您的光临！';
-                var msgFail = '预约失败，请您稍后再试！';
-                that.showMsg(msgOk);
-            }
         });
 
     },
