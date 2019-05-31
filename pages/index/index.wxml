@@ -72,8 +72,8 @@
                                 </view>
                                 <view class="list-item">
                                     <view>预约列表：</view>
-                                    <view class="order-list" wx:for="{{orderLists}}" wx:for-index="idx" wx:for-item="item">
-                                        <text class="order-list-li">{{item.size}}</text>
+                                    <view class="order-list" wx:for="{{petList}}" wx:for-index="idx" wx:for-item="item">
+                                        <text class="order-list-li">{{item}}</text>
                                     </view>
                                 </view>
                             </view>

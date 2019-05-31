@@ -187,11 +187,12 @@ Page({
         console.log("进入了预约详情页面");
         this.data.shopId = wx.getStorageSync('shopId');
         this.data.workTime = wx.getStorageSync('workTime');
-        this.data.mobile = wx.getStorageSync('phone');
+        var mobile = wx.getStorageSync('phone');
 
         var shopName = wx.getStorageSync('shopName');
         this.setData({
             shopName : shopName,
+            mobile : mobile
         });
 
         var isApp = wx.getStorageSync('isApp');

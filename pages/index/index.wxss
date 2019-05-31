@@ -16,15 +16,16 @@
     border-left: 1rpx solid #ddd;
 }
 .tabs .active {
-    background:#ccc;
+    background:#B0E2FF;
 }
 .head-tab-item:first-child {
   border-left:none;
 }
 .head-tab-item .title-text {
    font-size: 28rpx;
-   margin-bottom: 4rpx;
-   margin-top: 20rpx;
+   /*margin-bottom: 4rpx;*/
+   margin-top: 10rpx;
+    line-height: 30rpx;
 }
 .head-tab-item .date-mouth {
    display:inline-block;

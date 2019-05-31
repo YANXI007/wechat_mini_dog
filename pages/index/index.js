@@ -23,6 +23,7 @@ Page({
         appointmentId:null,
         appointmentId1:'',
         board:'',
+        petList :[],
 
     },
     onLoad: function () {
@@ -102,14 +103,11 @@ Page({
         wx.setStorageSync('shopId', shopId);
         wx.setStorageSync('workTime', workTime);
         wx.setStorageSync('shopName', shopName);
-        /*if(workTime==0){
-            workTime = ''
-        }*/
         wx.request({
             url: 'https://qinxuan.club/dog-mini/customer/appointmentPage.do',
             data: {
                 shopId: shopId,
-                workTime: '2019/05/06',
+                workTime: '2019/05/07',
                 openid: wx.getStorageSync('openid')
             },
             success(res) {
@@ -133,15 +131,121 @@ Page({
                     wx.setStorageSync("petLists",res.data.CustomerAppointment.petLists);
                     wx.setStorageSync("appointmentId",res.data.CustomerAppointment.appointmentId);
                     wx.setStorageSync("phone",res.data.CustomerAppointment.phone);
+                    wx.setStorageSync("orderDate",res.data.CustomerAppointment.oppointmentTime);
+                    var _petList = res.data.CustomerAppointment.petLists;
+                    var list0 = '';
+                    var list1 = '';
+                    var list2 = '';
+                    //渲染第一个
+                    if (_petList[0] != undefined){
+                        var kindPet = _petList[0].kindPet;
+                        var kingService = _petList[0].kindService;
+                        var size = _petList[0].size;
+                        var _kindPet;
+                        var _kingService;
+                        var _size;
+                        if (kindPet == "dog"){
+                            _kindPet = '狗';
+                            if (size == "mini"){
+                                _size = '小型';
+                            }else if (size == "normal"){
+                                _size = '中型';
+                            }else if (size == "large"){
+                                _size = '大型';
+                            }
+                        }else if (kindPet == "cat"){
+                            _kindPet = '猫';
+                            if (size == "mini"){
+                                _size = '幼年';
+                            }else if (size == "normal"){
+                                _size = '成年';
+                            }
+                        }
+                        if (kingService == "wash"){
+                            _kingService = '洗澡';
+                        }else if (kingService == "modeling"){
+                            _kingService = '造型';
+                        }else if (kingService == "SPA"){
+                            _kingService = 'SPA';
+                        }
+                        list0 = _size + " " + _kindPet + " " + _kingService;
+                    }
+                    //渲染第二个
+                    if (_petList[1] != undefined){
+                        var kindPet = _petList[1].kindPet;
+                        var kingService = _petList[1].kindService;
+                        var size = _petList[1].size;
+                        var _kindPet;
+                        var _kingService;
+                        var _size;
+                        if (kindPet == "dog"){
+                            _kindPet = '犬';
+                            if (size == "mini"){
+                                _size = '小型';
+                            }else if (size == "normal"){
+                                _size = '中型';
+                            }else if (size == "large"){
+                                _size = '大型';
+                            }
+                        }else if (kindPet == "cat"){
+                            _kindPet = '猫';
+                            if (size == "mini"){
+                                _size = '幼年';
+                            }else if (size == "normal"){
+                                _size = '成年';
+                            }
+                        }
+                        if (kingService == "wash"){
+                            _kingService = '洗澡';
+                        }else if (kingService == "modeling"){
+                            _kingService = '造型';
+                        }else if (kingService == "SPA"){
+                            _kingService = 'SPA';
+                        }
+                        list1 = _size + " " + _kindPet + " " + _kingService;
+                    }
+                    //渲染第三个
+                    if (_petList[2] != undefined){
+                        var kindPet = _petList[2].kindPet;
+                        var kingService = _petList[2].kindService;
+                        var size = _petList[2].size;
+                        var _kindPet;
+                        var _kingService;
+                        var _size;
+                        if (kindPet == "dog"){
+                            _kindPet = '狗';
+                            if (size == "mini"){
+                                _size = '小型';
+                            }else if (size == "normal"){
+                                _size = '中型';
+                            }else if (size == "large"){
+                                _size = '大型';
+                            }
+                        }else if (kindPet == "cat"){
+                            _kindPet = '猫';
+                            if (size == "mini"){
+                                _size = '幼年';
+                            }else if (size == "normal"){
+                                _size = '成年';
+                            }
+                        }
+                        if (kingService == "wash"){
+                            _kingService = '洗澡';
+                        }else if (kingService == "modeling"){
+                            _kingService = '造型';
+                        }else if (kingService == "SPA"){
+                            _kingService = 'SPA';
+                        }
+                        list2 = _size + " " + _kindPet + " " + _kingService;
+                    }
                     that.setData({
+                        petList:[list0,list1,list2],
                         noOrder: false,
-                        orderDate: workTime,
-                        orderAddress:shopId,
+                        orderDate: res.data.CustomerAppointment.oppointmentTime,
+                        orderAddress:shopName,
                         orderTel:res.data.CustomerAppointment.phone,
                         appointmentId:res.data.CustomerAppointment.appointmentId,
-
-                        // orderLists:res.data.CustomerAppointment.petLists,
-
+                        orderLists:res.data.CustomerAppointment.petLists,
                     });
                 }else{
                     wx.setStorageSync("appointmentId",null);
@@ -157,6 +261,11 @@ Page({
     goappo:function(){
         wx.navigateTo({
             url: '../appo/appo'
+        })
+    },
+    goindex:function(){
+        wx.navigateTo({
+            url: 'index'
         })
     },
     cancelOrder:function(){
@@ -191,7 +300,6 @@ Page({
                         icon: 'none',
                         duration: 1500
                     })
-                    // todo 将预约详情框框隐藏，预约按钮显示出来
                 }else {
                     wx.showToast({
                         title: '取消失败，请您稍后再试！',
@@ -201,6 +309,8 @@ Page({
                 }
             }
         });
+        //取消操作后，刷新页面
+        that.goindex();
     },
     bindGetUserInfo: function(e){
         var that = this;
