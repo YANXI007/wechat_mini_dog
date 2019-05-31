@@ -8,7 +8,7 @@
                 <view class="weui-label">预约日期：</view>
             </view>
             <view class="weui-cell__bd">
-                <input class="weui-input" value="11111" disabled />
+                <input class="weui-input" value="{{ workTime }}" disabled />
             </view>
         </view>
         <view class="weui-cell weui-cell_input">

@@ -192,7 +192,8 @@ Page({
         var shopName = wx.getStorageSync('shopName');
         this.setData({
             shopName : shopName,
-            mobile : mobile
+            mobile : mobile,
+            workTime : this.data.workTime
         });
 
         var isApp = wx.getStorageSync('isApp');
@@ -627,13 +628,12 @@ Page({
             console.log("=-=-=-=-=-=-=")
             return false;
         }
-
         wx.request({
             url: 'https://qinxuan.club/dog-mini/customer/appointment.do',
             dataType:'json',
             data: {
                 shopId: this.data.shopId,
-                workTime: '2019/05/06',
+                workTime: this.data.workTime,
                 mobile:mobile,
                 openid: wx.getStorageSync('openid'),
                 appointmentId: wx.getStorageSync('appointmentId'),
