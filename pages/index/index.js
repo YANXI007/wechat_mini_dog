@@ -24,6 +24,9 @@ Page({
         appointmentId1:'',
         board:'',
         petList :[],
+        timeYear1:'',
+        timeYear2:'',
+        timeYear3:'',
 
     },
     onLoad: function () {
@@ -49,7 +52,10 @@ Page({
             dateNum2: dateT[1].time,
             weekNum2: dateT[1].week,
             dateNum3: dateT[2].time,
-            weekNum3: dateT[2].week
+            weekNum3: dateT[2].week,
+            timeYear1:dateT[0].time_year,
+            timeYear2:dateT[1].time_year,
+            timeYear3:dateT[2].time_year,
 
         })
         this.queryInfo(0,0);
@@ -100,6 +106,17 @@ Page({
             shopName = '容桂店';
         }
         console.log("选择店铺ID" + shopId);
+
+        console.log("选择workTime" + workTime);
+        if (workTime==0){
+            workTime = that.data.timeYear1;
+        }else if(workTime==1){
+            workTime = that.data.timeYear2;
+        }else if(workTime == 2){
+            workTime = that.data.timeYear3;
+        }
+        console.log("选择workTime------" + workTime);
+
         wx.setStorageSync('shopId', shopId);
         wx.setStorageSync('workTime', workTime);
         wx.setStorageSync('shopName', shopName);
