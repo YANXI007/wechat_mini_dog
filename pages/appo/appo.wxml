@@ -12,7 +12,7 @@
             </view>
         </view>
 
-        <view class="weui-cell weui-cell_input">
+        <view class="weui-cell weui-cell_input" style="height: 44px;">
             <view class="weui-cell__hd">
                 <view class="weui-label">服务时间：</view>
             </view>
