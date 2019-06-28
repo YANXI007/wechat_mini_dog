@@ -5,6 +5,8 @@ const util = require('../../utils/util.js')
 
 Page({
   data: {
+      array: ['9:00 - 10:00', '10:00 - 11:00', '11:00 - 12:00', '12:00 - 13:00', '13:00 - 14:00', '14:00 - 15:00', '15:00 - 16:00', '16:00 - 17:00', '17:00 - 18:00'],
+      index: 0,
       list:[{
           kindPet:"",
           size:"",
@@ -18,7 +20,6 @@ Page({
           size:"",
           kindService:""
       }],
-
       shopId:"",
       workTime:"",
       mobile:"",
@@ -198,15 +199,20 @@ Page({
 
         var isApp = wx.getStorageSync('isApp');
         var petLists = '';
+        var quantum = '';
 
         //如果有历史预约记录，则进行回显
         //如果是修改，回显今日的记录，如果是预约，回显历史记录
         console.log("预约详情页面isApp：" + isApp);
         if (isApp == 1){
             petLists = wx.getStorageSync('petLists');
+            quantum = wx.getStorageSync('quantum');
             console.log("获取缓存预约列表：" + petLists);
+            console.log("获取缓存服务区间：" + quantum);
             //渲染petList
             that.showPetList(petLists);
+            //渲染服务区间
+            that.showQuantum(quantum);
         }else {
             wx.request({
                 url: 'https://qinxuan.club/dog-mini/customer/showAppointHistory.do',
@@ -217,9 +223,17 @@ Page({
                 success(res) {
                     if (res.data.historyState == 1) {
                         petLists = res.data.pets;
+                        quantum = res.data.quantum;
                         //渲染petList
                         console.log("success功能回调");
+                        console.log("res.data.phone：" + res.data.phone);
+                        console.log("res.data.quantum：" + quantum);
                         that.showPetList(petLists);
+                        //渲染服务区间
+                        that.showQuantum(quantum);
+                        that.setData({
+                            mobile: res.data.phone
+                        });
 
                     }
                 },
@@ -229,6 +243,22 @@ Page({
             });
         }
 
+    },
+    bindPickerChange: function(e) {
+        const that = this;
+        console.log('picker发送选择改变，携带值为', e.detail.value);
+        this.setData({
+            index: e.detail.value,
+        })
+    },
+
+    //渲染服务区间
+    showQuantum:function (e) {
+        const data = {
+            index:[e],
+        };
+        this.setData(data);
+           // this.data.index = 4
     },
 
     //渲染petList
@@ -592,7 +622,6 @@ Page({
         console.log('form发生了submit事件，携带数据为：', e.detail.value);
         console.log('提交参数：', this.data.list);
         //var param = {"petLists":this.data.list};
-
         var mobile = this.data.mobile;
         if (mobile == '' || mobile == ' ') {
             wx.showToast({
@@ -632,6 +661,7 @@ Page({
             url: 'https://qinxuan.club/dog-mini/customer/appointment.do',
             dataType:'json',
             data: {
+                quantum: this.data.index,
                 shopId: this.data.shopId,
                 workTime: this.data.workTime,
                 mobile:mobile,

@@ -40,11 +40,6 @@ Page({
                 if (res.authSetting['scope.userInfo']) {
                     wx.getUserInfo({
                         success: function(res) {
-                            wx.showToast({
-                                title: '用户已授权',
-                                icon: 'none',
-                                duration: 1500
-                            });
                             console.log("用户已授权");
                             // 用户已经授权过,不需要显示授权页面,所以不需要改变 isHide 的值
                             // 根据自己的需求有其他操作再补充
@@ -68,11 +63,6 @@ Page({
                         }
                     });
                 } else {
-                    wx.showToast({
-                        title: '用户未授权',
-                        icon: 'none',
-                        duration: 1500
-                    });
                     console.log("用户未授权");
                     // 用户没有授权
                     // 改变 isHide 的值，显示授权页面
@@ -141,7 +131,7 @@ Page({
             //用户按了拒绝按钮
             wx.showModal({
                 title: '警告',
-                content: '您点击了拒绝授权，将无法进入小程序，请授权之后再进入!!!',
+                content: '您点击了拒绝授权，将无法进入小程序，请授权之后再进入。',
                 showCancel: false,
                 confirmText: '返回授权',
                 success: function(res) {
@@ -238,6 +228,7 @@ Page({
                     wx.setStorageSync("appointmentId",res.data.CustomerAppointment.appointmentId);
                     wx.setStorageSync("phone",res.data.CustomerAppointment.phone);
                     wx.setStorageSync("orderDate",res.data.CustomerAppointment.oppointmentTimeStr);
+                    wx.setStorageSync("quantum",res.data.CustomerAppointment.quantum);
                     var _petList = res.data.CustomerAppointment.petLists;
                     var list0 = '';
                     var list1 = '';
@@ -344,6 +335,9 @@ Page({
                         }
                         list2 = _size + " " + _kindPet + " " + _kingService;
                     }
+                    //渲染时间区间
+                    var _quantum = that.tranQuantum(res.data.CustomerAppointment.quantum);
+
                     that.setData({
                         petList:[list0,list1,list2],
                         noOrder: false,
@@ -352,6 +346,7 @@ Page({
                         orderTel:res.data.CustomerAppointment.phone,
                         appointmentId:res.data.CustomerAppointment.appointmentId,
                         orderLists:res.data.CustomerAppointment.petLists,
+                        quantum:_quantum,
                     });
                 }else{
                     wx.setStorageSync("appointmentId",null);
@@ -418,17 +413,6 @@ Page({
         //取消操作后，刷新页面
         that.goindex();
     },
-    /* bindGetUserInfo: function(e){
-         var that = this;
-         //此处授权得到userInfo
-         console.log(e.detail.userInfo);
-         //接下来写业务代码
-
-         //最后，记得返回刚才的页面
-         wx.navigateBack({
-             delta: 1
-         })
-     },*/
     //上午的预约时间
     bindTimeChangeAm: function (e) {
         //console.log('picker发送选择改变，携带值为', e.detail.value);
@@ -443,6 +427,41 @@ Page({
             timePm: e.detail.value
         })
     },
+    //渲染时间区间
+    //, '', '', '', '', '', '', '', '17:00 - 18:00'
+    tranQuantum:function (e) {
+        var _quantum = '';
+        switch (e){
+            case 0:
+                _quantum = '9:00 - 10:00';
+                break;
+            case 1:
+                _quantum = '10:00 - 11:00';
+                break;
+            case 2:
+                _quantum = '11:00 - 12:00';
+                break;
+            case 3:
+                _quantum = '12:00 - 13:00';
+                break;
+            case 4:
+                _quantum = '13:00 - 14:00';
+                break;
+            case 5:
+                _quantum = '14:00 - 15:00';
+                break;
+            case 6:
+                _quantum = '15:00 - 16:00';
+                break;
+            case 7:
+                _quantum = '16:00 - 17:00';
+                break;
+            case 8:
+                _quantum = '17:00 - 18:00';
+                break;
+        }
+        return _quantum;
+    }
 
 
 });

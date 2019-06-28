@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08c9d198-6c3b-46e7-a6f4-0b9174052321" name="Default" comment="添加授权">
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/logo3.png" />
+    <list default="true" id="08c9d198-6c3b-46e7-a6f4-0b9174052321" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
       <change beforePath="$PROJECT_DIR$/pages/appo/appo.js" afterPath="$PROJECT_DIR$/pages/appo/appo.js" />
       <change beforePath="$PROJECT_DIR$/pages/appo/appo.wxml" afterPath="$PROJECT_DIR$/pages/appo/appo.wxml" />
       <change beforePath="$PROJECT_DIR$/pages/index/index.js" afterPath="$PROJECT_DIR$/pages/index/index.js" />
       <change beforePath="$PROJECT_DIR$/pages/index/index.wxml" afterPath="$PROJECT_DIR$/pages/index/index.wxml" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.wxss" afterPath="$PROJECT_DIR$/pages/index/index.wxss" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,30 +20,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="appo.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="appo.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/appo/appo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="208" column="28" lean-forward="false" selection-start-line="208" selection-start-column="17" selection-end-line="208" selection-end-column="28" />
+            <state relative-caret-position="150">
+              <caret line="213" column="20" lean-forward="true" selection-start-line="213" selection-start-column="20" selection-end-line="213" selection-end-column="20" />
               <folding>
-                <element signature="e#86#161#0" expanded="false" />
-                <element signature="e#480#1495#0" expanded="false" />
-                <element signature="e#1639#2654#0" expanded="false" />
-                <element signature="e#2799#3814#0" expanded="false" />
-                <element signature="e#9804#10903#0" expanded="false" />
-                <element signature="e#10941#11028#0" expanded="false" />
-                <element signature="e#11054#11187#0" expanded="false" />
-                <element signature="e#11218#11518#0" expanded="false" />
-                <element signature="e#11555#12348#0" expanded="false" />
-                <element signature="e#12384#12705#0" expanded="false" />
-                <element signature="e#12730#13059#0" expanded="false" />
-                <element signature="e#13084#13413#0" expanded="false" />
-                <element signature="e#13441#13573#0" expanded="false" />
-                <element signature="e#13605#13829#0" expanded="false" />
-                <element signature="e#13867#14616#0" expanded="false" />
-                <element signature="e#14644#14777#0" expanded="false" />
-                <element signature="e#14809#15028#0" expanded="false" />
-                <element signature="e#15066#15895#0" expanded="false" />
+                <element signature="e#269#344#0" expanded="false" />
+                <element signature="e#662#1677#0" expanded="false" />
+                <element signature="e#1821#2836#0" expanded="false" />
+                <element signature="e#2981#3996#0" expanded="false" />
+                <element signature="e#6591#10846#0" expanded="false" />
+                <element signature="e#7192#8370#0" expanded="false" />
+                <element signature="e#8424#9604#0" expanded="false" />
+                <element signature="e#10935#12034#0" expanded="false" />
+                <element signature="e#12072#12159#0" expanded="false" />
+                <element signature="e#12185#12318#0" expanded="false" />
+                <element signature="e#12349#12649#0" expanded="false" />
+                <element signature="e#12686#13479#0" expanded="false" />
+                <element signature="e#13515#13836#0" expanded="false" />
+                <element signature="e#13861#14190#0" expanded="false" />
+                <element signature="e#14215#14544#0" expanded="false" />
+                <element signature="e#14572#14704#0" expanded="false" />
+                <element signature="e#14736#14960#0" expanded="false" />
+                <element signature="e#14998#15747#0" expanded="false" />
+                <element signature="e#16197#17026#0" expanded="false" />
+                <element signature="e#20028#20104#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -55,38 +54,18 @@
       <file leaf-file-name="index.wxss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/index/index.wxss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
+            <state relative-caret-position="2916">
               <caret line="162" column="0" lean-forward="false" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="30" column="21" lean-forward="true" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.wxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/index/index.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="80" column="58" lean-forward="false" selection-start-line="80" selection-start-column="49" selection-end-line="80" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/index/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="319" column="34" lean-forward="true" selection-start-line="319" selection-start-column="34" selection-end-line="319" selection-end-column="34" />
+            <state relative-caret-position="834">
+              <caret line="63" column="3" lean-forward="false" selection-start-line="63" selection-start-column="3" selection-end-line="63" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -95,8 +74,18 @@
       <file leaf-file-name="util.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/util.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
+            <state relative-caret-position="186">
               <caret line="28" column="5" lean-forward="false" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/index/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="366">
+              <caret line="446" column="19" lean-forward="true" selection-start-line="446" selection-start-column="19" selection-end-line="446" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -105,8 +94,8 @@
       <file leaf-file-name="appo.wxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/appo/appo.wxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="74" lean-forward="false" selection-start-line="15" selection-start-column="74" selection-end-line="15" selection-end-column="74" />
+            <state relative-caret-position="1062">
+              <caret line="65" column="31" lean-forward="false" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -116,9 +105,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>day-item</find>
-      <find>timeAm</find>
-      <find>addressTab</find>
       <find>multiArray</find>
       <find>multiIndex</find>
       <find>objectMultiArray1</find>
@@ -128,7 +114,6 @@
       <find>bo</find>
       <find>预约店铺</find>
       <find>appointmentId</find>
-      <find>petLists</find>
       <find>电话</find>
       <find>手机</find>
       <find>orderTel</find>
@@ -144,8 +129,12 @@
       <find>queryInfo</find>
       <find>workTime</find>
       <find>goindex</find>
-      <find>showPetList</find>
       <find>orderDate</find>
+      <find>授权</find>
+      <find>bindPickerChange</find>
+      <find>multiIndex2</find>
+      <find>petLists</find>
+      <find>showPetList</find>
     </findStrings>
     <replaceStrings>
       <replace>multiArray1</replace>
@@ -187,10 +176,10 @@
         <option value="$PROJECT_DIR$/pages/index/index.json" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/pages/index/index.wxss" />
-        <option value="$PROJECT_DIR$/pages/index/index.wxml" />
         <option value="$PROJECT_DIR$/pages/appo/appo.wxml" />
-        <option value="$PROJECT_DIR$/pages/appo/appo.js" />
+        <option value="$PROJECT_DIR$/pages/index/index.wxml" />
         <option value="$PROJECT_DIR$/pages/index/index.js" />
+        <option value="$PROJECT_DIR$/pages/appo/appo.js" />
       </list>
     </option>
   </component>
@@ -241,6 +230,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -279,8 +270,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="AndroidView" />
     </panes>
@@ -440,7 +429,11 @@
       <workItem from="1557228065339" duration="2701000" />
       <workItem from="1557236039435" duration="3635000" />
       <workItem from="1557279835199" duration="391000" />
-      <workItem from="1559284984753" duration="7969000" />
+      <workItem from="1559284984753" duration="9290000" />
+      <workItem from="1559361472553" duration="1950000" />
+      <workItem from="1559526273702" duration="3144000" />
+      <workItem from="1559713201971" duration="4959000" />
+      <workItem from="1561684231644" duration="4014000" />
     </task>
     <task id="LOCAL-00001" summary="删除index，修改tab为index，index为默认加载页">
       <created>1555898215805</created>
@@ -491,11 +484,18 @@
       <option name="project" value="LOCAL" />
       <updated>1559285906210</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="添加授权">
+      <created>1559293259971</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1559293259971</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156814000" />
+    <option name="totallyTimeSpent" value="172202000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -511,36 +511,36 @@
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6445652" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20522387" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6445652" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20682302" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -584,7 +584,8 @@
     <MESSAGE value="添加回调函数提示框" />
     <MESSAGE value="预约功能调试成功" />
     <MESSAGE value="回显预约列表" />
-    <option name="LAST_COMMIT_MESSAGE" value="回显预约列表" />
+    <MESSAGE value="添加授权" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加授权" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -883,17 +884,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/util.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="28" column="5" lean-forward="false" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/index/index.wxss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
+        <state relative-caret-position="2916">
           <caret line="162" column="0" lean-forward="false" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
           <folding />
         </state>
@@ -909,62 +902,72 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/appo/appo.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="74" lean-forward="false" selection-start-line="15" selection-start-column="74" selection-end-line="15" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/index/index.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="80" column="58" lean-forward="false" selection-start-line="80" selection-start-column="49" selection-end-line="80" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/appo/appo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="208" column="28" lean-forward="false" selection-start-line="208" selection-start-column="17" selection-end-line="208" selection-end-column="28" />
-          <folding>
-            <element signature="e#86#161#0" expanded="false" />
-            <element signature="e#480#1495#0" expanded="false" />
-            <element signature="e#1639#2654#0" expanded="false" />
-            <element signature="e#2799#3814#0" expanded="false" />
-            <element signature="e#9804#10903#0" expanded="false" />
-            <element signature="e#10941#11028#0" expanded="false" />
-            <element signature="e#11054#11187#0" expanded="false" />
-            <element signature="e#11218#11518#0" expanded="false" />
-            <element signature="e#11555#12348#0" expanded="false" />
-            <element signature="e#12384#12705#0" expanded="false" />
-            <element signature="e#12730#13059#0" expanded="false" />
-            <element signature="e#13084#13413#0" expanded="false" />
-            <element signature="e#13441#13573#0" expanded="false" />
-            <element signature="e#13605#13829#0" expanded="false" />
-            <element signature="e#13867#14616#0" expanded="false" />
-            <element signature="e#14644#14777#0" expanded="false" />
-            <element signature="e#14809#15028#0" expanded="false" />
-            <element signature="e#15066#15895#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="319" column="34" lean-forward="true" selection-start-line="319" selection-start-column="34" selection-end-line="319" selection-end-column="34" />
+        <state relative-caret-position="36">
+          <caret line="64" column="34" lean-forward="true" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="30" column="21" lean-forward="true" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+        <state relative-caret-position="834">
+          <caret line="63" column="3" lean-forward="false" selection-start-line="63" selection-start-column="3" selection-end-line="63" selection-end-column="3" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="28" column="5" lean-forward="false" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/appo/appo.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1062">
+          <caret line="65" column="31" lean-forward="false" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/index/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="446" column="19" lean-forward="true" selection-start-line="446" selection-start-column="19" selection-end-line="446" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/appo/appo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="213" column="20" lean-forward="true" selection-start-line="213" selection-start-column="20" selection-end-line="213" selection-end-column="20" />
+          <folding>
+            <element signature="e#269#344#0" expanded="false" />
+            <element signature="e#662#1677#0" expanded="false" />
+            <element signature="e#1821#2836#0" expanded="false" />
+            <element signature="e#2981#3996#0" expanded="false" />
+            <element signature="e#6591#10846#0" expanded="false" />
+            <element signature="e#7192#8370#0" expanded="false" />
+            <element signature="e#8424#9604#0" expanded="false" />
+            <element signature="e#10935#12034#0" expanded="false" />
+            <element signature="e#12072#12159#0" expanded="false" />
+            <element signature="e#12185#12318#0" expanded="false" />
+            <element signature="e#12349#12649#0" expanded="false" />
+            <element signature="e#12686#13479#0" expanded="false" />
+            <element signature="e#13515#13836#0" expanded="false" />
+            <element signature="e#13861#14190#0" expanded="false" />
+            <element signature="e#14215#14544#0" expanded="false" />
+            <element signature="e#14572#14704#0" expanded="false" />
+            <element signature="e#14736#14960#0" expanded="false" />
+            <element signature="e#14998#15747#0" expanded="false" />
+            <element signature="e#16197#17026#0" expanded="false" />
+            <element signature="e#20028#20104#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -81,6 +81,10 @@
                                         <text>{{ orderDate }}</text>
                                     </view>
                                     <view class="list-item">
+                                        <text>服务时间：</text>
+                                        <text>{{ quantum }}</text>
+                                    </view>
+                                    <view class="list-item">
                                         <text>预约店铺：</text>
                                         <text>{{ orderAddress }}</text>
                                     </view>
